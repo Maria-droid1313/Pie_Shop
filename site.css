@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+}
+
+.html-first,
+.body-first {
+  height: 100%;
+}
+
+.body-first {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: gray;
+  display: block;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  min-height: 85%;
+}
+
+.contact-paragraph {
+  margin: 0.5em 0;
+}
+
+.header-box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #a493c0;
+  padding: 15px;
+}
+
+.navigation-box .list-anchor:visited,
+.navigation-box .list-anchor:link {
+  color: white;
+  text-decoration: none;
+}
+
+.navigation-box > .unordered-list,
+.footer-first .footer-list {
+  display: inline;
+  padding: 0;
+}
+
+.navigation-box > .unordered-list > .list-box,
+.footer-first .footer-list {
+  display: inline-block;
+  list-style: none;
+  margin: 0 5px;
+}
+.main-first {
+  display: block;
+  background-image: url("../html-css-javascript-getting-started-start/images/background.png");
+  padding-top: 3em;
+  padding-bottom: 3em;
+  min-height: 90%;
+}
+
+.footer-first {
+  padding: 15px;
+}
+
+.aside-first,
+.article-first {
+  padding: 2em;
+}
+
+.aside-first {
+  text-align: center;
+}
+
+.article-first {
+  width: 75%;
+}
+
+.columns {
+  display: flex;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-first {
+    display: flex;
+  }
+
+  .aside-first {
+    margin-left: 2%;
+  }
+  .title-one {
+    font-size: 3em;
+    margin-top: 00.5em;
+  }
+
+  .banner {
+    max-width: 100%;
+  }
+
+  .sub-title {
+    background-color: white;
+    font-size: 1.5em;
+    padding: 10px;
+  }
+  .columns-desktop {
+    display: flex;
+  }
+}
+
+/* Pies */
+
+.pie {
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+  border: solid 1px gray;
+}
+
+.pie .pie-image,
+.pie .columns {
+  width: 100%;
+}
+
+.pie .title {
+  font-weight: bold;
+}
+
+.pie .price {
+  text-align: right;
+  width: 50%;
+}
+
+.text-main-container .text-third {
+  color: green;
+}
+.text-first.item {
+  color: pink;
+}
+
+.pie .button-box {
+  background-color: #f6aeae;
+  padding: 10px;
+  border: solid 1px #f6aeae;
+  border-radius: 3px;
+  color: white;
+}
+
+.contact-title:hover {
+  color: violet;
+}

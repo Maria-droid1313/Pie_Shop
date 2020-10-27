@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="html-first">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site.css" type="text/css">
+    <link rel="icon" href="favicon.ico" type="image/ico">
+    <title>Pies | Bethany's Pie Shop</title>
+</head>
+<body class="body-first">
+    <header class="header-box">
+        <nav class="navigation-box">
+            <ul class="unordered-list">
+                <li class="list-box one"><a href="index.html" class="list-anchor">Home</a></li>
+                <li class="list-box two"><a href="pies.html" class="list-anchor">Pies</a</li>
+                <li class="list-box three"><a href="contact.html" class="list-anchor">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-first">
+        <aside class="aside-first">
+            <img src="../html-css-javascript-getting-started-start/images/logo.png" alt="logo" />
+        </aside>
+        <article class="article-first">
+            <section class="columns-desktop">
+                <div class="pie">
+                    <img src="images/apple-pie.png" class="pie-image" alt="apple Pie" />
+                    <div class="columns">
+                        <div class="title">Apple Pie</div>
+                        <div class="price">Php 160.00</div>
+                    </div>
+                    <p class="desc">Our best seller apple Pie</p>
+                    <button data-order="apple-pie" class="button-box">Order</button>
+                </div>
+                <div class="pie">
+                    <img src="images/cherry-pie.png" class="pie-image" alt="cherry Pie" />
+                    <div class="columns">
+                        <div class="title">Cherry Pie</div>
+                        <div class="price">Php 200.00</div>
+                    </div>
+                    <p class="desc">A summer classic!</p>
+                    <button data-order="cherry-pie" class="button-box">Order</button>
+                </div>
+                <div class="pie">
+                    <img src="images/strawberry pie.jpg" class="pie-image" alt="strawberry Pie" />
+                    <div class="columns">
+                        <div class="title">Strawberry Pie</div>
+                        <div class="price">Php 180.00</div>
+                    </div>
+                    <p class="desc">Try with coffee</p>
+                    <button data-order="cherry-pie" class="button-box">Order</button>
+                </div>
+                <div class="pie">
+                    <img src="images/chocolate pie.jpg" class="pie-image" alt="chocolate Pie" />
+                    <div class="columns">
+                        <div class="title">Chocolate Pie</div>
+                        <div class="price">Php 230.00</div>
+                    </div>
+                    <p class="desc">Make you life sweeter!</p>
+                    <button data-order="cherry-pie" class="button-box">Order</button>
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer class="footer-first">
+        <nav class="footer-navigation"> 
+            <ul class="footer-unordered">
+                <li class="footer-list one"><a href="index.html">Home</a></li>
+                <li class="footer-list two"><a href="pies.html">Pies</a></li>
+                <li class="footer-list three"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", function(e) {
+        const orderButtons = document.querySelectorAll("button[data-order]");
+
+        orderButtons.forEach(function(button) {
+
+            button.addEventListener("click", function(e) {
+                const button = e.currentTarget;
+                const container = button.parentNode;
+
+                const order = {
+                    id: button.getAttribute("data-order"),
+                    title: container.querySelector(".title").innerText,
+                    price: container.querySelector(".price").innerText,
+                    desc: container.querySelector(".desc").innerText   
+                };
+                
+                localStorage.setItem("order", JSON.stringify(order));
+
+                const url = window.location.href.replace("pies.html", "order.html");
+                window.location.href = url;
+            });
+        });
+    });
+</script>
+</html>
