@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="site.css" type="text/css">
     <link rel="icon" href="favicon.ico" type="image/ico">
+    <script scr="script.js"></script>
     <title>Pies | Bethany's Pie Shop</title>
 </head>
 <body class="body-first">
@@ -72,29 +73,5 @@
         </nav>
     </footer>
 </body>
-<script>
-    window.addEventListener("DOMContentLoaded", function(e) {
-        const orderButtons = document.querySelectorAll("button[data-order]");
-
-        orderButtons.forEach(function(button) {
-
-            button.addEventListener("click", function(e) {
-                const button = e.currentTarget;
-                const container = button.parentNode;
-
-                const order = {
-                    id: button.getAttribute("data-order"),
-                    title: container.querySelector(".title").innerText,
-                    price: container.querySelector(".price").innerText,
-                    desc: container.querySelector(".desc").innerText   
-                };
-                
-                localStorage.setItem("order", JSON.stringify(order));
-
-                const url = window.location.href.replace("pies.html", "order.html");
-                window.location.href = url;
-            });
-        });
-    });
-</script>
+x
 </html>
